@@ -1,0 +1,12 @@
+<p>photo works!</p>
+<form>
+
+<input [(ngModel)]="this.name"/>
+<input [(ngModel)]="this.age"/>
+
+<button (onclick)="this.generateData()"></button>
+<div>resultadoConta</div>
+<div *ngIf="this.result">{{this.result}}</div>
+<div>frase</div>
+<div *ngIf="this.sentence">{{this.sentence}}</div>
+</form>
