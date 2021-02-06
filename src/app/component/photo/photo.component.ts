@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-photo',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./photo.component.css']
 })
 export class PhotoComponent implements OnInit {
-  private name:string;
-  private age:number;
-  private sentence:string;
-  private result:number;
+  public name: string;
+  public age: number;
+  public sentence: string;
+  public result: number;
   constructor() {
   }
 
@@ -20,12 +21,23 @@ export class PhotoComponent implements OnInit {
     return 'O nome dela é ' + name + ', e sua age é ' + idade;
   }
 
-  generateTwoPlusAge(idade: number): string {
-    let result = idade * 2;
+  generateTwoPlusAge(idade: number): number {
+    const result = idade * 2;
     return result;
   }
   generateData(){
+    console.log(this.name);
+    console.log(this.age);
+    if (this.name == 'Bela' && this.age == 22){
     this.sentence = this.generateSentence(this.name, this.age);
     this.result = this.generateTwoPlusAge(this.age);
+    }
 }
+  setName(name: any) {
+    this.name = name.target.value;
+  }
+  setAge(age: any) {
+    this.age = age.target.value;
+  }
+  //Trabalhar com Arrays e criar objetos
 }

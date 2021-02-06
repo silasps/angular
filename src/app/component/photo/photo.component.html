@@ -1,10 +1,10 @@
-<p>photo works!</p>
 <form>
+<div>name</div>
+<input (keyup)="this.generateData()" (input)="this.setName($event)"/>
+  <div>idade</div>
+<input (keyup)="this.generateData()" (input)="this.setAge($event)"/>
+<button>Botão</button>
 
-<input [(ngModel)]="this.name"/>
-<input [(ngModel)]="this.age"/>
-
-<button (onclick)="this.generateData()"></button>
 <div>resultadoConta</div>
 <div *ngIf="this.result">{{this.result}}</div>
 <div>frase</div>
