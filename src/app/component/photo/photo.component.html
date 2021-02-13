@@ -1,9 +1,9 @@
 <form>
-<div>name</div>
+<div>Name</div>
 <input (keyup)="this.generateData()" (input)="this.setName($event)"/>
-  <div>idade</div>
+  <div>Age</div>
 <input (keyup)="this.generateData()" (input)="this.setAge($event)"/>
-<button>Botão</button>
+<button>Submit</button>
 
 <div>resultadoConta</div>
 <div *ngIf="this.result">{{this.result}}</div>
