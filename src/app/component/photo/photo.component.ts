@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
+import {Car, Engine, Radiator} from '../../interfaces/car';
 
 @Component({
   selector: 'app-photo',
@@ -26,6 +27,26 @@ export class PhotoComponent implements OnInit {
     return result;
   }
   generateData(){
+    let ferrari: Car = {} as Car;// {} Criando obj referenciando à car.ts
+    ferrari.name = 'Ferrari V8';
+    ferrari.motor = {} as Engine;
+    ferrari.motor.hp = 1;
+    ferrari.motor.valves = 10;
+    ferrari.motor.radiator = {} as Radiator;
+    ferrari.motor.radiator.waterBased = true;
+
+    let ferrari2: Car = {} as Car;
+    ferrari2.name = 'Palio';
+    ferrari2.motor = {} as Engine;
+    ferrari2.motor.hp = 1;
+    ferrari2.motor.valves = 10;
+    ferrari2.motor.radiator = {} as Radiator;
+    ferrari2.motor.radiator.waterBased = true;
+    const listaCarros: Car[] = [];//Array de carros
+    listaCarros.push(ferrari);
+    listaCarros.push(ferrari2);
+    listaCarros.push(ferrari);
+    console.log(listaCarros);
     console.log(this.name);
     console.log(this.age);
     if (this.name == 'Bela' && this.age == 22){
@@ -39,5 +60,6 @@ export class PhotoComponent implements OnInit {
   setAge(age: any) {
     this.age = age.target.value;
   }
-  //Trabalhar com Arrays e criar objetos
+  // Trabalhar com Arrays e criar objetos
+  // Criar método para criar carros e um método para buscar carros
 }
