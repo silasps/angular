@@ -1,0 +1,12 @@
+<form>
+<div>Name</div>
+<input (keyup)="this.generateData()" (input)="this.setName($event)"/>
+  <div>Age</div>
+<input (keyup)="this.generateData()" (input)="this.setAge($event)"/>
+<button>Submit</button>
+
+<div>resultadoConta</div>
+<div *ngIf="this.result">{{this.result}}</div>
+<div>frase</div>
+<div *ngIf="this.sentence">{{this.sentence}}</div>
+</form>

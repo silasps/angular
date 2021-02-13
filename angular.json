@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "Angular1"
+  "defaultProject": "Angular1",
+  "cli": {
+    "analytics": false
+  }
 }
