@@ -1,6 +1,5 @@
 import {Membro} from './membro';
 
-export interface Pastor {
-  pastores: Membro [];
+export interface Pastor extends Membro {
   funcaoPrincipal: string [];
 }
